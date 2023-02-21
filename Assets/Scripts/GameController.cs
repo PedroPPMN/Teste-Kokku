@@ -46,6 +46,10 @@ public class GameController : MonoBehaviour
     AudioManager am;
     UIManager ui;
 
+    private GameObject storageReferance;
+
+    public GameObject StorageReferance { get => storageReferance; set => storageReferance = value; }
+
     void Start()
     {
         iFormation = Resources.Load<GameObject>("Prefabs/I");
@@ -58,6 +62,8 @@ public class GameController : MonoBehaviour
         dicPieces.Add(3, tFormation);
         zFormation = Resources.Load<GameObject>("Prefabs/Z");
         dicPieces.Add(4, zFormation);
+
+        StorageReferance = GameObject.Find("Pieces/Storage");
 
         board = GameObject.Find("Tetris_Board").transform;
         pieces = GameObject.Find("Pieces").transform;

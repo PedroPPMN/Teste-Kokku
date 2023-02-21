@@ -65,7 +65,8 @@ public class Moviment : MonoBehaviour
     {
         if (stored)
         {
-            this.transform.position = new Vector3(23, 12, 0);
+            this.transform.position = new Vector3(gc.StorageReferance.transform.position.x, gc.StorageReferance.transform.position.y, 0);
+            this.transform.rotation = Quaternion.identity;
         }
 
         if (canMove && !stored)

@@ -1,2 +1,0 @@
-# Teste-Kokku
-Teste Tetris
